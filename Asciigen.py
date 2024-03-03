@@ -34,7 +34,7 @@ d = ImageDraw.Draw(outputImage)
 
 for i in range(height):
     for j in range(width):
-        r, g, b = pix[j, i]
+        r, g, b = pix[j, i][:3]
         h = int(r/3 + g/3 + b/3)
         pix[j, i] = (h, h, h)
         text_file.write(getChar(h))
